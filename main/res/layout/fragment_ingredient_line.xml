@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.storeyworthy.prototype.IngredientLine">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/ing_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+
+        <EditText
+            android:id="@+id/input_ing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/input_ing"
+            android:inputType="textPersonName"
+            android:nextFocusRight="@+id/input_amt" />
+
+        <EditText
+            android:id="@id/input_amt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.75"
+            android:ems="10"
+            android:hint="@string/input_ing_amt"
+            android:inputType="numberDecimal"
+            android:nextFocusLeft="@id/input_ing"
+            android:nextFocusRight="@+id/spinner_weight" />
+
+        <Spinner
+            android:id="@id/spinner_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.5"
+            android:nextFocusLeft="@id/input_amt" />
+
+        <Button
+            android:id="@+id/button_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:text="@string/clear_ing_line" />
+
+    </LinearLayout>
+</FrameLayout>
